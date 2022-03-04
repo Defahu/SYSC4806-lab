@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--    <script type="text/javascript" src="spa.js"></script>-->
+    <title>AddressBook Submit Form</title>
+</head>
+<body>
+<h1>Home</h1>
+<form action="#" th:action="@{/createAB}" method="post" id="createAB">
+    <h6> Create AddressBook</h6>
+    <p><input type="submit" value="Create AddressBook"/></p>
+</form>
+
+<form action="#" th:action="@{/addBuddy}" method="get" id="addBuddy">
+    <h6> Create BuddyInfo</h6>
+    <p>AddressBook id: <input type="number" name="id" id="ABId"/> </p>
+    <p><input type="submit" value="Create BuddyInfo"/></p>
+</form>
+
+
+<form action="#" th:action="@{/viewAB}" method="get" id="viewAB">
+    <h6> View AddressBook</h6>
+    <p>AddressBook Id: <input type="number" name="id" id="viewid"/> </p>
+    <p><input type="submit" value="View BuddyInfo"/></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>View AddressBook</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>View AddressBook </h1>
+<p  th:if="${id}" th:text="'Viewing AddressBook with Id: ' + ${AB.id}"/>
+<table th:if="${id}" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>phone number</th>
+    </tr>
+    <tr th:each="buddyInfo : ${AB.buddyList}">
+        <td th:text="${buddyInfo.id}"></td>
+        <td th:text="${buddyInfo.name}"></td>
+        <td th:text="${buddyInfo.address}"></td>
+        <td th:text="${buddyInfo.number}"></td>
+    </tr>
+</table>
+<a href="/">back home</a>
+</form>
+</body>
+</html>
