@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>AddressBook</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table th:if="${validId}" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Telephone</th>
+    </tr>
+    <tr th:each="buddyInfo : ${addressbook.buddyList}">
+        <td th:text="${buddyInfo.id}"></td>
+        <td th:text="${buddyInfo.name}"></td>
+        <td th:text="${buddyInfo.address}"></td>
+        <td th:text="${buddyInfo.number}"></td>
+    </tr>
+</table>
+<h1 th:if="not ${validId}"> Invalid AddressBook Id</h1>
+</body>
+</html>
